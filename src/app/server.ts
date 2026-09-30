@@ -5,7 +5,7 @@ import type { WebhookSigner } from './signer.js';
 
 const createSchema = z.object({
   customer_id: z.string().min(1),
-  plan: z.string().min(1),
+  plan: z.enum(['basic', 'pro']),
   payment_method_id: z.string().min(1)
 });
 

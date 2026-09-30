@@ -43,7 +43,7 @@ export class BillingService {
     const subscription: Subscription = {
       id: `sub_${randomUUID().slice(0, 8)}`,
       customerId: input.customer_id,
-      plan: input.plan,
+      plan: plan.code,
       status: 'trialing',
       createdAt: new Date().toISOString()
     };
